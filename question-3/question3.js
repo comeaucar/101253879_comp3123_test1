@@ -34,8 +34,8 @@ const removeLogs = () => {
 const removeDirectory = () => {
     if(fs.existsSync("./logs")){
         fs.rmdirSync("./logs")
+        console.log("Directory Deleted")
     }
 }
 
 createLogs().then(removeLogs).then(removeDirectory).catch((err) => console.log(err));
-
